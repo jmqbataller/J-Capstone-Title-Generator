@@ -1,0 +1,123 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #DCF2F1, #7FC7D9, #365486, #0F1035);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.site-title {
+    margin: 0;
+}
+
+section {
+    flex: 1; /* Allow the section to take up remaining vertical space */
+    padding: 20px;
+    text-align: center;
+}
+
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.curved-box {
+    position: relative;
+    background-color: #fff;
+    padding: 40px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1), 0 0 0 3px rgba(52, 152, 219, 0.7);
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Add the moving line animation */
+@keyframes moveLine {
+    0% {
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1), 0 0 0 3px rgba(52, 152, 219, 0.7);
+    }
+    25% {
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1), 15px 0 0 3px rgba(52, 152, 219, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1), 0 0 0 3px rgba(52, 152, 219, 0.7);
+    }
+    75% {
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1), -15px 0 0 3px rgba(52, 152, 219, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1), 0 0 0 3px rgba(52, 152, 219, 0.7);
+    }
+}
+
+.curved-box:hover {
+    animation: moveLine 2s infinite linear;
+}
+
+.box-text {
+    margin: 0;
+    font-size: 18px;
+    color: #555;
+}
+
+button#generate-btn {
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button#generate-btn:hover {
+    background-color: #2980b9;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+#copy-btn {
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#copy-btn:hover {
+    background-color: #27ae60;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    flex-shrink: 0; /* Prevent the footer from shrinking */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+    /* Add responsive styles if needed */
+}
